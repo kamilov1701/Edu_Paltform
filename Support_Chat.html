@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface": "#191c1d",
+            "on-secondary-fixed-variant": "#005321",
+            "primary-fixed-dim": "#c3c0ff",
+            "tertiary-fixed-dim": "#ffb695",
+            "inverse-surface": "#2e3132",
+            "on-secondary-fixed": "#002109",
+            "primary-fixed": "#e2dfff",
+            "on-error": "#ffffff",
+            "surface-container": "#edeeef",
+            "on-primary-fixed": "#0f0069",
+            "error-container": "#ffdad6",
+            "secondary-fixed": "#6bff8f",
+            "on-tertiary-container": "#ffd2be",
+            "tertiary-fixed": "#ffdbcc",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#f8f9fa",
+            "on-tertiary-fixed": "#351000",
+            "on-tertiary-fixed-variant": "#7b2f00",
+            "error": "#ba1a1a",
+            "outline-variant": "#c7c4d8",
+            "primary": "#3525cd",
+            "surface-tint": "#4d44e3",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#dad7ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e1e3e4",
+            "surface-container-high": "#e7e8e9",
+            "surface-dim": "#d9dadb",
+            "tertiary": "#7e3000",
+            "inverse-primary": "#c3c0ff",
+            "on-primary-fixed-variant": "#3323cc",
+            "on-background": "#191c1d",
+            "inverse-on-surface": "#f0f1f2",
+            "primary-container": "#4f46e5",
+            "on-error-container": "#93000a",
+            "surface": "#f8f9fa",
+            "background": "#f8f9fa",
+            "surface-container-low": "#f3f4f5",
+            "secondary-fixed-dim": "#4ae176",
+            "secondary-container": "#6bff8f",
+            "outline": "#777587",
+            "surface-variant": "#e1e3e4",
+            "secondary": "#006e2f",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#464555",
+            "tertiary-container": "#a44100",
+            "on-secondary-container": "#007432"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .chat-bg {
+      background-color: #F9FAFB;
+      background-image: radial-gradient(#e2dfff 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-background font-body text-on-background antialiased overflow-hidden h-screen flex flex-col">
+  <!-- TopAppBar -->
+  <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+    <div class="flex items-center justify-between px-4 h-16 w-full">
+      <div class="flex items-center gap-3">
+        <a href="./Student_home.html">
+          <button
+            class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 rounded-full">
+            <span class="material-symbols-outlined">arrow_back</span>
+          </button>
+        </a>
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white overflow-hidden">
+            <img class="w-full h-full object-cover" data-alt="Female support agent portrait"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8-LgoYj6XgjFzFYVMm8TvWGf5MNmaIUtQ8fnMc04wmQGp1qf13nIwbWhUVF-OGlLJ5Tot1wyK-OkBKmI0BLIoqx_AtvJfm6Y_d0XK96F9qDJZz-X5CoEUev1Jno-Y1DFSpNZ76zHe2TE3pMIrC7rZzM3jHyFL5srix6JJgmJU9jNY8bEeq0JJG5km0vO2tdmucnrvOCKlW_ZEoKhVXL9nS13-aDsIPW8Twow5v4mXzeAZwfXUVfdpfLtIywQc5HvveT2qUzDLWgY" />
+          </div>
+          <div>
+            <h1 class="font-inter font-bold tracking-tight text-slate-900 dark:text-slate-100 leading-tight">The
+              Academic Atelier</h1>
+            <span class="text-[10px] font-medium uppercase tracking-wider text-secondary flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Online Support
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <button
+          class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 rounded-full">
+          <span class="material-symbols-outlined">more_vert</span>
+        </button>
+      </div>
+    </div>
+    <div class="bg-slate-100/50 dark:bg-slate-800/50 h-[1px]"></div>
+  </header>
+  <!-- Main Content: Chat Canvas -->
+  <main class="flex-1 overflow-y-auto pt-16 pb-24 chat-bg px-4 flex flex-col gap-6">
+    <!-- Date Divider -->
+    <div class="flex justify-center my-4">
+      <span
+        class="px-3 py-1 bg-surface-container-highest/50 backdrop-blur-sm text-on-surface-variant text-[11px] font-semibold rounded-full uppercase tracking-widest">Today</span>
+    </div>
+    <!-- Support Message (Left) -->
+    <div class="flex flex-col items-start max-w-[85%] group">
+      <div class="flex items-end gap-2">
+        <div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden shrink-0">
+          <img class="w-full h-full object-cover" data-alt="Avatar of support curator"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcsAKuETcnxKP_vv1YrmzW-GwUwsfAeKrVxricp2ntdeJrwLSw77r3XQJBi1ejMhGEXxU2ZTYCg3BN0BenhAHDNVm_IXfiiZ4rKsETp6bDdc0KNzT7NQlBoM74_BTJnXg7sTIyxKigmhO8dSUnqhoPwAawqlSPNi2mMFo5fqVGgdXcy7QhSHZ_XwBZLUtCSzCeCMrruMCD2ZoJXiT03SxakaMQPLY6Nl2ZRT2x2knHTR2F0sv3YEf_V-qAeUc9a5UX1B3G8IQr4TQ" />
+        </div>
+        <div class="relative bg-surface-container-lowest text-on-surface p-4 rounded-2xl rounded-bl-none shadow-sm">
+          <p class="text-body-md leading-relaxed">Welcome back to The Atelier. I am your Lead Curator today. How can I
+            assist your academic journey this evening?</p>
+          <span class="block text-[10px] text-outline text-right mt-1 font-medium">14:02</span>
+        </div>
+      </div>
+    </div>
+    <!-- User Message (Right) -->
+    <div class="flex flex-col items-end max-w-[85%] ml-auto group">
+      <div
+        class="relative bg-primary-container text-on-primary p-4 rounded-2xl rounded-br-none shadow-md bg-gradient-to-br from-primary to-primary-container">
+        <p class="text-body-md leading-relaxed">Hello! I'm having trouble accessing the "Advanced Philosophy" module I
+          purchased yesterday.</p>
+        <div class="flex items-center justify-end gap-1 mt-1">
+          <span class="text-[10px] text-primary-fixed-dim/80 font-medium">14:05</span>
+          <span class="material-symbols-outlined text-[14px] text-primary-fixed-dim"
+            style="font-variation-settings: 'FILL' 1;">done_all</span>
+        </div>
+      </div>
+    </div>
+    <!-- Support Message with Attachment (Left) -->
+    <div class="flex flex-col items-start max-w-[85%]">
+      <div class="flex items-end gap-2">
+        <div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden shrink-0">
+          <img class="w-full h-full object-cover" data-alt="Avatar of support curator"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLm1-pQnaak3gU4KlhRr-4ShtRUvPoV2xI4iQuAeZnxA-24cJahrl7rUKwW5Z2V59MOsWN8_ittnyIcNNQGBjslzL0RTjfXqeVoUq0jga_euhJuoCqWJZyOSxMwy95SekqI1I2unU1tHauMekHAffVlXZWovwpUhHQ8wrg3lPRnI4BxFxkw8T2Bxksoc4jy7igp3_m64CRuwkbU0-TtpM90QeEQAfULGPsEiOL19aUyaZ0tsXdZFwKwYywUL658p2OUyfeTKPihfo" />
+        </div>
+        <div
+          class="relative bg-surface-container-lowest text-on-surface p-1 rounded-2xl rounded-bl-none shadow-sm overflow-hidden">
+          <div class="p-3">
+            <p class="text-body-md leading-relaxed">I see the issue. It looks like the curator's signature was missing
+              from your digital enrollment. I've manually validated your access.</p>
+          </div>
+          <div
+            class="bg-surface-container-low p-3 m-1 rounded-xl flex items-center gap-3 border border-outline-variant/10">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined">description</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-bold truncate">Course_Guide_Philo.pdf</p>
+              <p class="text-[10px] text-outline">2.4 MB • PDF</p>
+            </div>
+            <button class="p-2 text-primary">
+              <span class="material-symbols-outlined">download</span>
+            </button>
+          </div>
+          <div class="px-3 pb-2 flex justify-end">
+            <span class="text-[10px] text-outline font-medium">14:08</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- User Message (Right) -->
+    <div class="flex flex-col items-end max-w-[85%] ml-auto group">
+      <div
+        class="relative bg-primary-container text-on-primary p-4 rounded-2xl rounded-br-none shadow-md bg-gradient-to-br from-primary to-primary-container">
+        <p class="text-body-md leading-relaxed">That worked perfectly! Thank you for the quick resolution. The guide is
+          very helpful.</p>
+        <div class="flex items-center justify-end gap-1 mt-1">
+          <span class="text-[10px] text-primary-fixed-dim/80 font-medium">14:10</span>
+          <span class="material-symbols-outlined text-[14px] text-primary-fixed-dim"
+            style="font-variation-settings: 'FILL' 1;">done_all</span>
+        </div>
+      </div>
+    </div>
+    <!-- Typing Indicator -->
+    <div class="flex items-center gap-2 px-10 py-2 opacity-60">
+      <div class="flex gap-1">
+        <div class="w-1.5 h-1.5 rounded-full bg-outline animate-pulse"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-outline animate-pulse delay-75"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-outline animate-pulse delay-150"></div>
+      </div>
+      <span class="text-[11px] font-medium text-outline italic">Curator is typing...</span>
+    </div>
+  </main>
+  <!-- Bottom Message Input Shell -->
+  <div class="fixed bottom-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md pb-safe z-50">
+    <div class="flex items-end gap-2 px-4 py-3">
+      <button class="p-2 mb-1 text-slate-500 hover:text-primary transition-colors">
+        <span class="material-symbols-outlined">add_circle</span>
+      </button>
+      <div
+        class="flex-1 relative flex items-center bg-surface-container-low rounded-2xl px-4 min-h-[48px] border-b-2 border-outline-variant/20 focus-within:border-primary transition-all">
+        <textarea class="w-full bg-transparent border-none focus:ring-0 text-sm py-3 resize-none max-h-32 font-medium"
+          placeholder="Type your inquiry..." rows="1"></textarea>
+        <button class="p-1 text-slate-400 hover:text-tertiary transition-colors">
+          <span class="material-symbols-outlined">sentiment_satisfied</span>
+        </button>
+      </div>
+      <button
+        class="w-12 h-12 bg-primary-container text-on-primary rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform duration-150 bg-gradient-to-tr from-primary to-primary-container">
+        <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">send</span>
+      </button>
+    </div>
+  </div>
+  <!-- Floating Navigation Suppression Check: Hidden as requested for task-focused page -->
+  <nav class="hidden md:flex fixed top-16 right-4 flex-col gap-2 z-40">
+    <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-primary-container">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+  </nav>
+</body>
+
+</html>

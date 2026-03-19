@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Lessons - The Academic Atelier</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface": "#191c1d",
+            "on-secondary-fixed-variant": "#005321",
+            "primary-fixed-dim": "#c3c0ff",
+            "tertiary-fixed-dim": "#ffb695",
+            "inverse-surface": "#2e3132",
+            "on-secondary-fixed": "#002109",
+            "primary-fixed": "#e2dfff",
+            "on-error": "#ffffff",
+            "surface-container": "#edeeef",
+            "on-primary-fixed": "#0f0069",
+            "error-container": "#ffdad6",
+            "secondary-fixed": "#6bff8f",
+            "on-tertiary-container": "#ffd2be",
+            "tertiary-fixed": "#ffdbcc",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#f8f9fa",
+            "on-tertiary-fixed": "#351000",
+            "on-tertiary-fixed-variant": "#7b2f00",
+            "error": "#ba1a1a",
+            "outline-variant": "#c7c4d8",
+            "primary": "#3525cd",
+            "surface-tint": "#4d44e3",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#dad7ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e1e3e4",
+            "surface-container-high": "#e7e8e9",
+            "surface-dim": "#d9dadb",
+            "tertiary": "#7e3000",
+            "inverse-primary": "#c3c0ff",
+            "on-primary-fixed-variant": "#3323cc",
+            "on-background": "#191c1d",
+            "inverse-on-surface": "#f0f1f2",
+            "primary-container": "#4f46e5",
+            "on-error-container": "#93000a",
+            "surface": "#f8f9fa",
+            "background": "#f8f9fa",
+            "surface-container-low": "#f3f4f5",
+            "secondary-fixed-dim": "#4ae176",
+            "secondary-container": "#6bff8f",
+            "outline": "#777587",
+            "surface-variant": "#e1e3e4",
+            "secondary": "#006e2f",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#464555",
+            "tertiary-container": "#a44100",
+            "on-secondary-container": "#007432"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+  <!-- TopAppBar -->
+  <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+    <div class="flex items-center justify-between px-4 h-16 w-full max-w-screen-xl mx-auto">
+      <div class="flex items-center gap-4">
+        <button
+          class="material-symbols-outlined text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-200"
+          data-icon="menu">menu</button>
+        <h1 class="text-lg font-bold tracking-tighter text-indigo-600 dark:text-indigo-400">The Academic Atelier</h1>
+      </div>
+      <div class="flex items-center gap-2">
+        <button
+          class="material-symbols-outlined text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full active:scale-95 duration-200"
+          data-icon="notifications">notifications</button>
+      </div>
+    </div>
+    <div class="bg-slate-100/50 dark:bg-slate-800/50 h-[1px] w-full"></div>
+  </header>
+  <main class="pt-20 px-4 max-w-screen-xl mx-auto">
+    <!-- Hero Section -->
+    <section class="mt-4 mb-8">
+      <div class="flex flex-col gap-1">
+        <span class="text-xs font-semibold tracking-widest text-primary uppercase">Curated Learning</span>
+        <h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Lessons</h2>
+      </div>
+    </section>
+    <!-- Horizontal Scroll Chips -->
+    <nav
+      class="flex gap-3 overflow-x-auto hide-scrollbar pb-6 sticky top-16 bg-surface/95 backdrop-blur-sm z-40 py-4 -mx-4 px-4">
+      <button
+        class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-on-primary shadow-lg shadow-primary/20 whitespace-nowrap font-medium text-sm transition-transform active:scale-95">
+        <span class="material-symbols-outlined text-[18px]" data-icon="auto_awesome">auto_awesome</span>
+        New
+      </button>
+      <button
+        class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant whitespace-nowrap font-medium text-sm border border-outline-variant/20 hover:bg-surface-container-high transition-colors active:scale-95">
+        All Lessons
+      </button>
+      <button
+        class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant whitespace-nowrap font-medium text-sm border border-outline-variant/20 hover:bg-surface-container-high transition-colors active:scale-95">
+        Philosophy
+      </button>
+      <button
+        class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant whitespace-nowrap font-medium text-sm border border-outline-variant/20 hover:bg-surface-container-high transition-colors active:scale-95">
+        Fine Arts
+      </button>
+      <button
+        class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant whitespace-nowrap font-medium text-sm border border-outline-variant/20 hover:bg-surface-container-high transition-colors active:scale-95">
+        Literature
+      </button>
+      <button
+        class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant whitespace-nowrap font-medium text-sm border border-outline-variant/20 hover:bg-surface-container-high transition-colors active:scale-95">
+        History
+      </button>
+    </nav>
+    <!-- Video List (Bento-lite Layout) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+      <!-- Featured Video Card (Asymmetric) -->
+      <div class="md:col-span-2 group">
+        <div class="relative aspect-video rounded-3xl overflow-hidden bg-surface-container-highest shadow-sm">
+          <img alt="Classroom setting"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            data-alt="Modern library interior with natural lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbOZVdBmdcv4xkJdSfUXrLhUWf9-Llt4Lp3vqu6TiTASmMTNTaQ69FuJRgBS6Rx4cIHZ8pE8sYAEUaybEKgdnbZAFOuhRhnypjZ4JamAWWCdWTZ8SLlYToUFjZAuXgN5Samz9CJC4RVpEN71YRfDDx40QGDq4igGI2CzpNqrtMJobvWU_0Suw7wTaGCb_S8KOXEWbTihJz69XffVaN0en_EtKZTupw2a3RZbJkbV24XErfqwM1h10-2nY3oF7HFAKfEt6BaERM5og" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+            <div class="flex flex-col gap-2">
+              <span
+                class="inline-block px-3 py-1 bg-tertiary text-on-tertiary text-[10px] font-bold uppercase tracking-widest rounded-lg w-fit">Deep
+                Focus</span>
+              <h3 class="text-2xl font-bold text-white leading-tight">The Metaphysics of Modernity: Part I</h3>
+              <p class="text-white/80 text-sm">Dr. Helena Vance • 45 min</p>
+            </div>
+            <button class="bg-white text-primary p-4 rounded-2xl shadow-xl active:scale-90 transition-transform">
+              <span class="material-symbols-outlined text-[32px]" data-icon="play_arrow"
+                style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Regular Lesson Item 1 -->
+      <div class="flex flex-col gap-4 group">
+        <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-surface-container-low">
+          <img alt="Books and coffee"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            data-alt="Close up of classic literature books stacked"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6FVhlRVGEBYjIxB6Mup-nm1scCxGO1vQZ1NU5teSyS_83aY5RTyw0Y_fAllfyFKE3nwiFFeE-E6N6XLcbt_Dam5nw-04ckAzNP4cMWdIfN9FhWtNmXkxLoF2sWONyTabP6H_KQO-9rjpAgw1-kyPB1k5CQ6-Il99nS7myKF9rqV1xLe3NZHxZVfol9d28pUeS2Mh1f_ZuYNLZ5GkqbGYSHKWUpB5E6TWCxhgKdalhLg9dm2hImSB8CO12fj0xmTha0Qd_qZ34cMw" />
+          <div
+            class="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md font-medium">
+            12:45</div>
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="bg-primary/90 text-on-primary p-4 rounded-full shadow-2xl">
+              <span class="material-symbols-outlined" data-icon="play_circle"
+                style="font-variation-settings: 'FILL' 1;">play_circle</span>
+            </div>
+          </div>
+        </div>
+        <div class="px-1">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-base font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">
+              Narrative Structures in Renaissance Art</h4>
+            <button class="material-symbols-outlined text-slate-400" data-icon="more_vert">more_vert</button>
+          </div>
+          <!-- Progress Bar -->
+          <div class="w-full h-1 bg-secondary-container/30 rounded-full mb-1">
+            <div class="h-full bg-secondary rounded-full" style="width: 65%;"></div>
+          </div>
+          <div class="flex justify-between text-[10px] font-medium text-slate-500 uppercase tracking-tighter">
+            <span>65% Completed</span>
+            <span>Next: Symbolism</span>
+          </div>
+        </div>
+      </div>
+      <!-- Regular Lesson Item 2 -->
+      <div class="flex flex-col gap-4 group">
+        <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-surface-container-low">
+          <img alt="Abstract art"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            data-alt="Abstract colorful painting with geometric shapes"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqENV41pgNqtCKSuK_7UJ_iRE2RCwobY17AG4tXP8ihvGHOOHBfD-u_GfwniLF-hjCmEnm-7xBSg9MTqj2UfODZgfztid1wyti11dGXq7Z8L13tHcYU-3HB3d_5M9XuNc2cSwstg-q-1bBDV-bm1bWVS3wPe0Ml0Wi3JAa7uKJI17PYRDPzUjaETzunOhDlxoJpjIWg0tZxK5NGnC3wGi43RwI9JZ7OyKzCG-a7QeA7AjUCQS-FeDfSyTz5Vc01MT-zy7wnCpAwEY" />
+          <div
+            class="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md font-medium">
+            28:10</div>
+        </div>
+        <div class="px-1">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-base font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">
+              Quantum Ethics: The Curator's Guide</h4>
+            <button class="material-symbols-outlined text-slate-400" data-icon="more_vert">more_vert</button>
+          </div>
+          <!-- Progress Bar -->
+          <div class="w-full h-1 bg-secondary-container/30 rounded-full mb-1">
+            <div class="h-full bg-secondary rounded-full" style="width: 12%;"></div>
+          </div>
+          <div class="flex justify-between text-[10px] font-medium text-slate-500 uppercase tracking-tighter">
+            <span>Just Started</span>
+            <span>24m remaining</span>
+          </div>
+        </div>
+      </div>
+      <!-- Regular Lesson Item 3 -->
+      <div class="flex flex-col gap-4 group">
+        <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-surface-container-low">
+          <img alt="Greek statues"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            data-alt="Classical marble statues in a gallery"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhwVXT_uGJbCeqJgvRWL-x0YivLhO6RMmhfMg14UFIm0Xo51gvjb_WbHsEpoNJB6feQGmPLc1-z_LT7Va3kAaPeApfln9phB4iqLKuW4UqiwEMqmL6pm1qLu1VZvDqK9I_pbpKdQArF7SSGvoqyNF24COzWHy2ew83oKlBqMs_hoAJXTrJATgVfcj9FjLqF8k1tZ91BXvPULIhk_Up14XFyqpv93zBpY3IdQWLhXxG4NyMzArEgvuIO2nZThlHP7DmqN50BgEMj6M" />
+          <div
+            class="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md font-medium">
+            15:55</div>
+        </div>
+        <div class="px-1">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-base font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">
+              Socratic Method in the Digital Age</h4>
+            <button class="material-symbols-outlined text-slate-400" data-icon="more_vert">more_vert</button>
+          </div>
+          <!-- Progress Bar (Empty) -->
+          <div class="w-full h-1 bg-surface-container-highest rounded-full mb-1">
+            <div class="h-full bg-secondary rounded-full" style="width: 0%;"></div>
+          </div>
+          <div class="flex justify-between text-[10px] font-medium text-slate-500 uppercase tracking-tighter">
+            <span>New Lesson</span>
+            <span>Not started</span>
+          </div>
+        </div>
+      </div>
+      <!-- Regular Lesson Item 4 -->
+      <div class="flex flex-col gap-4 group">
+        <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-surface-container-low">
+          <img alt="Modern library"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            data-alt="Minimalist bookshelf with white books"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJp_gUMV8cpXyfAeE3ynXAUnHI8_rS2sqEl40jok24TAs4ecLJj7p3K9OVe0aGIZDsuZxZKaVV-wHME4VMHzGOj6sZD8s8-HbvSdVpZs7sAsRpAPsairajg4O2rZ_Lu2esbNgEgk-PfgyhuU_SEqhUVcXiGxWTd00ajO47ocvjsztz9gyBglPiE5KoULVmlxeN1Spqk_ilWyRXVsWRNRhXB_cE5rGVynNRZN--SWEyJbPKud2ipvxnF7fPkay1tEsEsD2N0wK4jzk" />
+          <div
+            class="absolute top-4 right-4 bg-black/40 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-md font-medium">
+            52:00</div>
+          <div class="absolute inset-0 bg-secondary/20 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-5xl" data-icon="check_circle"
+              style="font-variation-settings: 'FILL' 1;">check_circle</span>
+          </div>
+        </div>
+        <div class="px-1">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="text-base font-bold text-on-surface leading-snug group-hover:text-primary transition-colors">The
+              Architecture of Information</h4>
+            <button class="material-symbols-outlined text-slate-400" data-icon="more_vert">more_vert</button>
+          </div>
+          <!-- Progress Bar (Full) -->
+          <div class="w-full h-1 bg-secondary rounded-full mb-1"></div>
+          <div class="flex justify-between text-[10px] font-medium text-secondary uppercase tracking-tighter">
+            <span>Completed</span>
+            <span>Rewatch lesson</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- BottomNavBar -->
+  <nav
+    class="fixed bottom-0 w-full rounded-t-3xl border-t border-transparent z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)]">
+    <div class="flex justify-around items-center w-full px-2 py-3 pb-safe">
+      <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+        href="./Student_home.html">
+        <span class="material-symbols-outlined" data-icon="home">home</span>
+        <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Home</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+        href="./Subject_List.html">
+        <span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+        <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Subjects</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl px-3 py-1 active:scale-90 duration-150"
+        href="./Video_Lesson.html">
+        <span class="material-symbols-outlined" data-icon="play_circle"
+          style="font-variation-settings: 'FILL' 1;">play_circle</span>
+        <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Lessons</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+        href="./Support_Chat.html">
+        <span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+        <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Chat</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+        href="./Profile.html">
+        <span class="material-symbols-outlined" data-icon="person">person</span>
+        <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Profile</span>
+      </a>
+    </div>
+  </nav>
+</body>
+
+</html>

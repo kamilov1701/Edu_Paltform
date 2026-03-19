@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>The Academic Atelier - Teacher Dashboard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-surface": "#191c1d",
+            "on-secondary-fixed-variant": "#005321",
+            "primary-fixed-dim": "#c3c0ff",
+            "tertiary-fixed-dim": "#ffb695",
+            "inverse-surface": "#2e3132",
+            "on-secondary-fixed": "#002109",
+            "primary-fixed": "#e2dfff",
+            "on-error": "#ffffff",
+            "surface-container": "#edeeef",
+            "on-primary-fixed": "#0f0069",
+            "error-container": "#ffdad6",
+            "secondary-fixed": "#6bff8f",
+            "on-tertiary-container": "#ffd2be",
+            "tertiary-fixed": "#ffdbcc",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#f8f9fa",
+            "on-tertiary-fixed": "#351000",
+            "on-tertiary-fixed-variant": "#7b2f00",
+            "error": "#ba1a1a",
+            "outline-variant": "#c7c4d8",
+            "primary": "#3525cd",
+            "surface-tint": "#4d44e3",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#dad7ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e1e3e4",
+            "surface-container-high": "#e7e8e9",
+            "surface-dim": "#d9dadb",
+            "tertiary": "#7e3000",
+            "inverse-primary": "#c3c0ff",
+            "on-primary-fixed-variant": "#3323cc",
+            "on-background": "#191c1d",
+            "inverse-on-surface": "#f0f1f2",
+            "primary-container": "#4f46e5",
+            "on-error-container": "#93000a",
+            "surface": "#f8f9fa",
+            "background": "#f8f9fa",
+            "surface-container-low": "#f3f4f5",
+            "secondary-fixed-dim": "#4ae176",
+            "secondary-container": "#6bff8f",
+            "outline": "#777587",
+            "surface-variant": "#e1e3e4",
+            "secondary": "#006e2f",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#464555",
+            "tertiary-container": "#a44100",
+            "on-secondary-container": "#007432"
+          },
+          fontFamily: {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    .glass-nav {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none h-16 flex items-center justify-between px-4">
+    <div class="flex items-center gap-3">
+      <button
+        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 rounded-full">
+        <span class="material-symbols-outlined text-slate-500" data-icon="menu">menu</span>
+      </button>
+      <span class="text-lg font-bold tracking-tighter text-indigo-600 dark:text-indigo-400">The Academic Atelier</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <button
+        class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200 rounded-full">
+        <span class="material-symbols-outlined text-slate-500" data-icon="notifications">notifications</span>
+      </button>
+      <div
+        class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-bold text-xs"
+        data-alt="Teacher profile avatar placeholder">TA</div>
+    </div>
+  </header>
+  <main class="pt-24 px-4 md:px-8 max-w-7xl mx-auto">
+    <!-- Hero / Welcome -->
+    <section class="mb-10">
+      <h1 class="text-4xl font-bold tracking-tight text-on-surface mb-2">Welcome back, Professor.</h1>
+      <p class="text-on-surface-variant max-w-md">Your curriculum is curated. Your groups are ready for their next
+        intellectual leap.</p>
+    </section>
+    <!-- Groups Horizontal Section -->
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-bold tracking-tight flex items-center gap-2">
+          <span class="w-2 h-6 bg-primary rounded-full"></span>
+          Active Groups
+        </h2>
+        <button
+          class="bg-primary-container text-on-primary px-6 py-2.5 rounded-full font-semibold flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+          Create New Group
+        </button>
+      </div>
+      <!-- Horizontal Scroll Cards -->
+      <div class="flex gap-6 overflow-x-auto pb-6 -mx-4 px-4 no-scrollbar">
+        <!-- Group Card 1 -->
+        <div
+          class="min-w-[320px] bg-surface-container-lowest rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-4">
+            <span
+              class="material-symbols-outlined text-on-surface-variant/30 group-hover:text-primary transition-colors"
+              data-icon="more_vert">more_vert</span>
+          </div>
+          <div class="mb-8">
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/60 mb-2 block">Advanced
+              Seminar</span>
+            <h3 class="text-2xl font-bold text-on-surface tracking-tight">Post-Modern Ethics</h3>
+          </div>
+          <div class="flex items-center justify-between mt-auto">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200" data-alt="Student avatar 1"></div>
+              <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300" data-alt="Student avatar 2"></div>
+              <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-400" data-alt="Student avatar 3"></div>
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white bg-primary-fixed flex items-center justify-center text-[10px] font-bold text-on-primary-fixed">
+                +12</div>
+            </div>
+            <div class="text-right">
+              <p class="text-[10px] uppercase font-bold text-on-surface-variant">Progress</p>
+              <p class="text-lg font-bold text-secondary">84%</p>
+            </div>
+          </div>
+          <div class="mt-4 h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+            <div class="h-full bg-secondary rounded-full" style="width: 84%"></div>
+          </div>
+        </div>
+        <!-- Group Card 2 -->
+        <div
+          class="min-w-[320px] bg-surface-container-lowest rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group">
+          <div class="absolute top-0 right-0 p-4">
+            <span
+              class="material-symbols-outlined text-on-surface-variant/30 group-hover:text-primary transition-colors"
+              data-icon="more_vert">more_vert</span>
+          </div>
+          <div class="mb-8">
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/60 mb-2 block">Foundation
+              Course</span>
+            <h3 class="text-2xl font-bold text-on-surface tracking-tight">Classical Logic</h3>
+          </div>
+          <div class="flex items-center justify-between mt-auto">
+            <div class="flex -space-x-2">
+              <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200" data-alt="Student avatar 4"></div>
+              <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300" data-alt="Student avatar 5"></div>
+              <div
+                class="w-8 h-8 rounded-full border-2 border-white bg-primary-fixed flex items-center justify-center text-[10px] font-bold text-on-primary-fixed">
+                +28</div>
+            </div>
+            <div class="text-right">
+              <p class="text-[10px] uppercase font-bold text-on-surface-variant">Progress</p>
+              <p class="text-lg font-bold text-secondary">32%</p>
+            </div>
+          </div>
+          <div class="mt-4 h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+            <div class="h-full bg-secondary rounded-full" style="width: 32%"></div>
+          </div>
+        </div>
+        <!-- Group Card 3 -->
+        <div
+          class="min-w-[320px] bg-surface-container-lowest rounded-3xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden group border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center">
+          <span class="material-symbols-outlined text-4xl text-outline-variant mb-2" data-icon="groups">groups</span>
+          <p class="font-medium text-outline">View Archived Groups</p>
+        </div>
+      </div>
+    </section>
+    <!-- Manage Section (Bento Style) -->
+    <section class="mb-20">
+      <h2 class="text-xl font-bold tracking-tight mb-6 flex items-center gap-2">
+        <span class="w-2 h-6 bg-tertiary rounded-full"></span>
+        Atelier Management
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Manage Students -->
+        <div
+          class="md:col-span-2 bg-surface-container-low rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between overflow-hidden relative">
+          <div class="z-10">
+            <h3 class="text-2xl font-bold text-on-surface mb-2">Refine Your Roster</h3>
+            <p class="text-on-surface-variant mb-6 max-w-xs">Edit student profiles, adjust learning permissions, or
+              manage invites across all your active groups.</p>
+            <button class="text-primary font-bold flex items-center gap-2 group">
+              Manage All Students
+              <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                data-icon="arrow_forward">arrow_forward</span>
+            </button>
+          </div>
+          <div
+            class="relative w-full md:w-48 h-48 bg-white rounded-2xl shadow-xl flex items-center justify-center rotate-3 scale-110 translate-x-4">
+            <div class="grid grid-cols-2 gap-2 p-4 w-full">
+              <div class="h-12 bg-surface-container rounded-lg"
+                data-alt="Abstract UI element representing student list"></div>
+              <div class="h-12 bg-primary-fixed rounded-lg" data-alt="Abstract UI element representing student profile">
+              </div>
+              <div class="h-12 bg-surface-container rounded-lg" data-alt="Abstract UI element representing student row">
+              </div>
+              <div class="h-12 bg-surface-container rounded-lg"
+                data-alt="Abstract UI element representing student record"></div>
+            </div>
+            <div class="absolute -top-4 -left-4 bg-tertiary text-on-tertiary p-3 rounded-xl shadow-lg">
+              <span class="material-symbols-outlined" data-icon="person_search">person_search</span>
+            </div>
+          </div>
+        </div>
+        <!-- Move Students / Group Transfers -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant/10 rounded-3xl p-8 shadow-sm flex flex-col">
+          <div
+            class="w-12 h-12 bg-secondary-container rounded-2xl flex items-center justify-center text-on-secondary-container mb-6">
+            <span class="material-symbols-outlined" data-icon="move_up">move_up</span>
+          </div>
+          <h3 class="text-xl font-bold text-on-surface mb-2">Group Transfers</h3>
+          <p class="text-on-surface-variant text-sm mb-6 flex-grow">Efficiently move students between classes or levels
+            without losing their progress data.</p>
+          <button
+            class="w-full py-3 bg-surface-container-high rounded-xl text-on-surface font-semibold hover:bg-surface-container-highest transition-colors">
+            Start Transfer
+          </button>
+        </div>
+        <!-- Group Settings -->
+        <div
+          class="bg-surface-container-lowest border border-outline-variant/10 rounded-3xl p-8 shadow-sm flex flex-col">
+          <div
+            class="w-12 h-12 bg-primary-fixed-dim rounded-2xl flex items-center justify-center text-on-primary-fixed-variant mb-6">
+            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+          </div>
+          <h3 class="text-xl font-bold text-on-surface mb-2">Global Settings</h3>
+          <p class="text-on-surface-variant text-sm mb-6 flex-grow">Configure curriculum visibility, grading scales, and
+            default notification rules.</p>
+          <button
+            class="w-full py-3 border border-outline-variant/30 rounded-xl text-on-surface font-semibold hover:bg-surface-container-low transition-colors">
+            Edit Settings
+          </button>
+        </div>
+        <!-- Curated Feed Card (Asymmetric Layout Example) -->
+        <div
+          class="md:col-span-2 bg-gradient-to-br from-indigo-900 to-primary text-white rounded-3xl p-8 relative overflow-hidden shadow-2xl shadow-primary/30">
+          <div class="relative z-10 md:pr-48">
+            <span
+              class="bg-white/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4 inline-block">Curated
+              Resource</span>
+            <h3 class="text-3xl font-bold mb-4 tracking-tight">The Digital Curator's Guide to Peer Learning</h3>
+            <p class="text-white/80 mb-6 italic">"How intentional classroom layouts influence collaborative critical
+              thinking."</p>
+            <button
+              class="bg-white text-primary px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform">
+              Read Article
+            </button>
+          </div>
+          <div class="absolute right-[-20px] top-[-20px] w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div class="absolute right-4 bottom-4 w-40 h-40 opacity-20 pointer-events-none"
+            data-alt="Stylized decorative school icon">
+            <span class="material-symbols-outlined text-[160px]" data-icon="auto_stories">auto_stories</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- BottomNavBar -->
+  <nav
+    class="fixed bottom-0 w-full rounded-t-3xl border-t border-transparent z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] flex justify-around items-center px-2 py-3 pb-safe">
+    <a class="flex flex-col items-center justify-center text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl px-3 py-1 active:scale-90 transition-transform duration-150"
+      href="#">
+      <span class="material-symbols-outlined" data-icon="home">home</span>
+      <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Home</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+      href="#">
+      <span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+      <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Subjects</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+      href="#">
+      <span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+      <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Lessons</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+      href="#">
+      <span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+      <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Chat</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+      href="#">
+      <span class="material-symbols-outlined" data-icon="person">person</span>
+      <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Profile</span>
+    </a>
+  </nav>
+</body>
+
+</html>

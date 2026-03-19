@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Academic Atelier - Login</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#005321",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "inverse-surface": "#2e3132",
+                        "on-secondary-fixed": "#002109",
+                        "primary-fixed": "#e2dfff",
+                        "on-error": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed": "#0f0069",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#6bff8f",
+                        "on-tertiary-container": "#ffd2be",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-fixed": "#351000",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c7c4d8",
+                        "primary": "#3525cd",
+                        "surface-tint": "#4d44e3",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#dad7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-dim": "#d9dadb",
+                        "tertiary": "#7e3000",
+                        "inverse-primary": "#c3c0ff",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-background": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-container": "#4f46e5",
+                        "on-error-container": "#93000a",
+                        "surface": "#f8f9fa",
+                        "background": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-fixed-dim": "#4ae176",
+                        "secondary-container": "#6bff8f",
+                        "outline": "#777587",
+                        "surface-variant": "#e1e3e4",
+                        "secondary": "#006e2f",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#464555",
+                        "tertiary-container": "#a44100",
+                        "on-secondary-container": "#007432"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Supressing Navigation Shell for Transactional Login Flow -->
+    <main class="min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+        <!-- Background Ambient Accents -->
+        <div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary-container/10 rounded-full blur-[120px]">
+        </div>
+        <div
+            class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary-container/10 rounded-full blur-[120px]">
+        </div>
+        <div class="w-full max-w-md relative">
+            <!-- Brand Identity Anchor -->
+            <div class="flex flex-col items-center mb-10">
+                <div
+                    class="w-14 h-14 bg-primary-container rounded-3xl flex items-center justify-center mb-6 shadow-xl shadow-primary-container/20">
+                    <span class="material-symbols-outlined text-on-primary text-3xl" data-weight="fill"
+                        style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+                </div>
+                <h1 class="text-4xl font-headline font-bold tracking-tight text-on-surface">Welcome Back</h1>
+                <p class="text-on-surface-variant mt-2 font-medium">Continue your intellectual journey</p>
+            </div>
+            <!-- Login Card -->
+            <div
+                class="bg-surface-container-lowest p-8 md:p-10 rounded-3xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.06)]">
+                <form class="space-y-6">
+                    <!-- Email Field -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1"
+                            for="email">Email or Phone</label>
+                        <div class="relative group">
+                            <input
+                                class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/20 focus:border-primary-container focus:ring-0 px-4 py-4 rounded-t-xl transition-all duration-300 placeholder:text-outline"
+                                id="email" placeholder="curator@atelier.com" type="text" />
+                            <div
+                                class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-outline-variant group-focus-within:text-primary-container">
+                                <span class="material-symbols-outlined text-xl">alternate_email</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Password Field -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center px-1">
+                            <label class="block text-xs font-bold tracking-widest text-on-surface-variant uppercase"
+                                for="password">Password</label>
+                            <a class="text-xs font-bold text-primary-container hover:underline tracking-tight"
+                                href="#">Forgot password?</a>
+                        </div>
+                        <div class="relative group">
+                            <input
+                                class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant/20 focus:border-primary-container focus:ring-0 px-4 py-4 rounded-t-xl transition-all duration-300 placeholder:text-outline"
+                                id="password" placeholder="••••••••" type="password" />
+                            <div
+                                class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-outline-variant group-focus-within:text-primary-container">
+                                <span class="material-symbols-outlined text-xl">lock_open</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Login Button -->
+                    <button
+                        class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold rounded-2xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all duration-200 mt-4 flex items-center justify-center gap-2 group"
+                        type="submit">
+                        <a href="./Student_home.html">Login</a>
+                        <span
+                            class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </button>
+                </form>
+                <!-- Divider -->
+                <div class="relative flex items-center py-8">
+                    <div class="flex-grow border-t border-outline-variant/10"></div>
+                    <span class="flex-shrink mx-4 text-xs font-bold text-outline uppercase tracking-widest">or continue
+                        with</span>
+                    <div class="flex-grow border-t border-outline-variant/10"></div>
+                </div>
+                <!-- Social Login -->
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors active:scale-95 duration-200">
+                        <img alt="" class="w-5 h-5" data-alt="Google colorful logo icon"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSGrv11QBdS7E_CGC3R5YszaBJQoKRv6Z8mL8lHKKGnIVdTy6NndgEp1-yAmt_cseWonIDfrF3KY-x7VtN0wE7EG_JfKJVbMzfO7PQ_AnexfTlUMeg8fHlXwqkGsN6aAk-RKyPz1Sy65eb8anY12N7PVdHSRbhjscYhNE92IqKB-6do23DvAMgRlH54eQGvKxe6ruUOGqP4ffOHhUc7U655yRu5_sGlI_fFHLkQRI-9jjP_N4yNJ7I4uw3_9MEDOxx6s2rG33qCkQ" />
+                        <span class="text-sm font-semibold text-on-surface-variant">Google</span>
+                    </button>
+                    <button
+                        class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors active:scale-95 duration-200">
+                        <span class="material-symbols-outlined text-on-surface text-xl" data-weight="fill"
+                            style="font-variation-settings: 'FILL' 1;">ios</span>
+                        <span class="text-sm font-semibold text-on-surface-variant">Apple</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Sign Up Prompt -->
+            <p class="text-center mt-10 text-on-surface-variant font-medium">
+                New to the atelier?
+                <a class="text-primary-container font-bold ml-1 hover:underline" href="#">Sign up</a>
+            </p>
+        </div>
+    </main>
+    <!-- Branding Footer (Minimalist) -->
+    <footer class="absolute bottom-8 w-full text-center">
+        <p class="text-[10px] uppercase tracking-[0.2em] text-outline-variant font-bold">The Academic Atelier • 2024</p>
+    </footer>
+</body>
+
+</html>
