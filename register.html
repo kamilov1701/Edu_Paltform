@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+
+<body class="bg-gray-50 flex items-center justify-center min-h-screen font-body">
+
+    <div class="w-full max-w-md bg-white p-8 rounded-3xl shadow-xl">
+
+        <h1 class="text-3xl font-bold text-center mb-6">Create Account</h1>
+
+        <form id="registerForm" class="space-y-4">
+
+            <input id="name" placeholder="Full Name" class="w-full border p-3 rounded-xl" required />
+
+            <select id="role" class="w-full border p-3 rounded-xl">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+
+            <select id="grade" class="w-full border p-3 rounded-xl">
+                <option value="">Select Grade</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+            </select>
+
+            <input id="email" type="email" placeholder="Email" class="w-full border p-3 rounded-xl" required />
+
+            <div class="relative">
+                <input id="password" type="password" placeholder="Password" class="w-full border p-3 rounded-xl pr-10"
+                    required />
+                <span onclick="togglePassword('password')" class="absolute right-3 top-3 cursor-pointer">👁</span>
+            </div>
+
+            <div class="relative">
+                <input id="confirmPassword" type="password" placeholder="Confirm Password"
+                    class="w-full border p-3 rounded-xl pr-10" required />
+                <span onclick="togglePassword('confirmPassword')"
+                    class="absolute right-3 top-3 cursor-pointer">👁</span>
+            </div>
+
+            <label class="flex items-center gap-2 text-sm">
+                <input type="checkbox" id="agree" required />
+                I agree to terms & policy
+            </label>
+
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-xl">
+                Register
+            </button>
+
+        </form>
+
+        <p class="text-center mt-4">
+            Already have account?
+            <a href="./Login.html" class="text-indigo-600">Login</a>
+        </p>
+
+    </div>
+
+    <!-- JS -->
+    <script type="module">
+        import { auth } from "./firebase.js";
+        import { createUserWithEmailAndPassword }
+            from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+        document.getElementById("registerForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const password = document.getElementById("password").value;
+            const confirm = document.getElementById("confirmPassword").value;
+
+            if (password !== confirm) {
+                alert("Passwords do not match ❌");
+                return;
+            }
+
+            try {
+                await createUserWithEmailAndPassword(
+                    auth,
+                    document.getElementById("email").value,
+                    password
+                );
+
+                alert("Registered successfully ✅");
+                window.location.href = "./Login.html";
+
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+
+    <!-- SHOW / HIDE PASSWORD -->
+    <script>
+        function togglePassword(id) {
+            const input = document.getElementById(id);
+            input.type = input.type === "password" ? "text" : "password";
+        }
+    </script>
+
+</body>
+
+</html>

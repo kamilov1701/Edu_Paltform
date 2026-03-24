@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en">
 
 <head>
@@ -11,9 +10,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -21,58 +17,18 @@
         extend: {
           colors: {
             "on-surface": "#191c1d",
-            "on-secondary-fixed-variant": "#005321",
-            "primary-fixed-dim": "#c3c0ff",
-            "tertiary-fixed-dim": "#ffb695",
-            "inverse-surface": "#2e3132",
-            "on-secondary-fixed": "#002109",
-            "primary-fixed": "#e2dfff",
-            "on-error": "#ffffff",
-            "surface-container": "#edeeef",
-            "on-primary-fixed": "#0f0069",
-            "error-container": "#ffdad6",
-            "secondary-fixed": "#6bff8f",
-            "on-tertiary-container": "#ffd2be",
-            "tertiary-fixed": "#ffdbcc",
-            "on-tertiary": "#ffffff",
-            "surface-bright": "#f8f9fa",
-            "on-tertiary-fixed": "#351000",
-            "on-tertiary-fixed-variant": "#7b2f00",
-            "error": "#ba1a1a",
-            "outline-variant": "#c7c4d8",
             "primary": "#3525cd",
-            "surface-tint": "#4d44e3",
-            "on-primary": "#ffffff",
-            "on-primary-container": "#dad7ff",
-            "surface-container-lowest": "#ffffff",
-            "surface-container-highest": "#e1e3e4",
-            "surface-container-high": "#e7e8e9",
-            "surface-dim": "#d9dadb",
-            "tertiary": "#7e3000",
-            "inverse-primary": "#c3c0ff",
-            "on-primary-fixed-variant": "#3323cc",
-            "on-background": "#191c1d",
-            "inverse-on-surface": "#f0f1f2",
             "primary-container": "#4f46e5",
-            "on-error-container": "#93000a",
-            "surface": "#f8f9fa",
-            "background": "#f8f9fa",
-            "surface-container-low": "#f3f4f5",
-            "secondary-fixed-dim": "#4ae176",
-            "secondary-container": "#6bff8f",
-            "outline": "#777587",
-            "surface-variant": "#e1e3e4",
             "secondary": "#006e2f",
-            "on-secondary": "#ffffff",
+            "surface": "#f8f9fa",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f3f4f5",
+            "surface-container-high": "#e7e8e9",
+            "outline": "#777587",
             "on-surface-variant": "#464555",
-            "tertiary-container": "#a44100",
-            "on-secondary-container": "#007432"
+            "tertiary": "#7e3000",
           },
-          fontFamily: {
-            "headline": ["Inter"],
-            "body": ["Inter"],
-            "label": ["Inter"]
-          },
+          fontFamily: { "body": ["Inter"], "headline": ["Inter"] },
           borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
         },
       },
@@ -83,16 +39,6 @@
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       display: inline-block;
       line-height: 1;
-      text-transform: none;
-      letter-spacing: normal;
-      word-wrap: normal;
-      white-space: nowrap;
-      direction: ltr;
-    }
-
-    .glass-effect {
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
     }
   </style>
   <style>
@@ -100,24 +46,26 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <title>Profile - The Academic Atelier</title>
 </head>
 
 <body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+
   <!-- TopAppBar -->
   <header
-    class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none h-16 flex items-center justify-between px-4">
+    class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm h-16 flex items-center justify-between px-4">
     <div class="flex items-center gap-3">
-      <button
-        class="material-symbols-outlined text-indigo-600 dark:text-indigo-400 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">menu</button>
-      <h1 class="font-inter font-bold tracking-tight text-slate-900 dark:text-slate-100 text-lg">Profile</h1>
+      <button class="material-symbols-outlined text-indigo-600 p-2">menu</button>
+      <h1 class="font-inter font-bold text-lg">Profile</h1>
     </div>
     <div class="flex items-center gap-2">
-      <button
-        class="material-symbols-outlined text-indigo-600 dark:text-indigo-400 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors active:scale-95 duration-200">notifications</button>
+      <button class="material-symbols-outlined text-indigo-600 p-2">notifications</button>
     </div>
   </header>
+
   <main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
-    <!-- Profile Header Section -->
+
+    <!-- Profile Header -->
     <section class="flex flex-col items-center text-center space-y-4">
       <div class="relative">
         <div
@@ -130,20 +78,18 @@
           <span class="material-symbols-outlined text-sm">edit</span>
         </div>
       </div>
+
       <div>
-        <h2 class="text-3xl font-bold tracking-tight text-on-surface">Azizbek Thorne</h2>
+        <h2 id="userName" class="text-3xl font-bold tracking-tight text-on-surface">Loading...</h2>
         <div class="flex items-center justify-center gap-4 mt-2 text-on-surface-variant text-sm font-medium">
           <span class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-base">phone</span>
-            +1 (555) 012-3456
-          </span>
-          <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
-          <span class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-base">calendar_today</span>
-            Joined Jan 2024
+            <span class="material-symbols-outlined text-base">alternate_email</span>
+            <span id="userEmail">Loading...</span>
           </span>
         </div>
+        <p id="userGrade" class="text-sm text-on-surface-variant mt-1">Loading grade...</p>
       </div>
+
       <a href="./Settings.html">
         <button
           class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-semibold shadow-md active:scale-95 transition-all">
@@ -151,10 +97,11 @@
         </button>
       </a>
     </section>
-    <!-- Stats Bento Grid -->
+
+    <!-- Stats Section -->
     <section class="grid grid-cols-2 gap-4">
       <div
-        class="col-span-2 bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex flex-col justify-between border border-outline-variant/10">
+        class="col-span-2 bg-surface-container-lowest p-6 rounded-3xl shadow-sm flex flex-col justify-between border border-outline/10">
         <div class="flex justify-between items-start">
           <span class="bg-secondary/10 text-secondary p-3 rounded-2xl material-symbols-outlined"
             style="font-variation-settings: 'FILL' 1;">military_tech</span>
@@ -165,14 +112,14 @@
           <h3 class="text-xl font-bold text-on-surface">Academic Excellence</h3>
         </div>
       </div>
-      <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/10">
+      <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline/10">
         <span class="bg-primary/10 text-primary p-3 rounded-2xl material-symbols-outlined mb-4"
           style="font-variation-settings: 'FILL' 1;">auto_stories</span>
         <p class="text-on-surface-variant text-xs font-medium uppercase tracking-wider">Completed</p>
         <h3 class="text-2xl font-bold text-on-surface">12</h3>
         <p class="text-on-surface-variant text-xs mt-1">Courses</p>
       </div>
-      <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/10">
+      <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline/10">
         <span class="bg-tertiary/10 text-tertiary p-3 rounded-2xl material-symbols-outlined mb-4"
           style="font-variation-settings: 'FILL' 1;">play_circle</span>
         <p class="text-on-surface-variant text-xs font-medium uppercase tracking-wider">Finished</p>
@@ -180,112 +127,81 @@
         <p class="text-on-surface-variant text-xs mt-1">Lessons</p>
       </div>
     </section>
-    <!-- Recent Activity Section -->
+
+    <!-- Recent Activity -->
     <section class="space-y-4">
       <div class="flex items-center justify-between">
         <h3 class="text-xl font-bold tracking-tight text-on-surface">Recent Activity</h3>
         <button class="text-primary font-bold text-sm">View All</button>
       </div>
       <div class="space-y-3">
-        <!-- Activity Item -->
-        <div
-          class="flex items-center gap-4 p-4 bg-surface-container-low rounded-2xl group hover:bg-surface-container-high transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
-            <span class="material-symbols-outlined">check_circle</span>
-          </div>
-          <div class="flex-1">
-            <h4 class="font-bold text-on-surface">Advanced Microeconomics</h4>
-            <p class="text-sm text-on-surface-variant">Completed Lesson 4: Market Dynamics</p>
-          </div>
-          <span class="text-xs font-medium text-outline">2h ago</span>
-        </div>
-        <!-- Activity Item -->
-        <div
-          class="flex items-center gap-4 p-4 bg-surface-container-low rounded-2xl group hover:bg-surface-container-high transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined">grade</span>
-          </div>
-          <div class="flex-1">
-            <h4 class="font-bold text-on-surface">Assignment Graded</h4>
-            <p class="text-sm text-on-surface-variant">Score: 95/100 in Renaissance Art</p>
-          </div>
-          <span class="text-xs font-medium text-outline">Yesterday</span>
-        </div>
-        <!-- Activity Item -->
-        <div
-          class="flex items-center gap-4 p-4 bg-surface-container-low rounded-2xl group hover:bg-surface-container-high transition-colors">
-          <div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
-            <span class="material-symbols-outlined">forum</span>
-          </div>
-          <div class="flex-1">
-            <h4 class="font-bold text-on-surface">New Discussion</h4>
-            <p class="text-sm text-on-surface-variant">Commented on 'Quantum Mechanics Hub'</p>
-          </div>
-          <span class="text-xs font-medium text-outline">2d ago</span>
-        </div>
+        <!-- Activity items can be dynamically added here in the future -->
       </div>
     </section>
-    <!-- Additional Actions -->
-    <section class="bg-surface-container p-6 rounded-3xl">
-      <h4 class="font-bold text-on-surface mb-4">Account Preferences</h4>
-      <div class="space-y-1">
-        <button
-          class="w-full flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-high transition-colors">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-on-surface-variant">payment</span>
-            <span class="font-medium">Billing &amp; Subscription</span>
-          </div>
-          <span class="material-symbols-outlined text-outline">chevron_right</span>
-        </button>
-        <button
-          class="w-full flex items-center justify-between p-3 rounded-xl hover:bg-surface-container-high transition-colors">
-          <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-on-surface-variant">security</span>
-            <span class="font-medium">Privacy &amp; Security</span>
-          </div>
-          <span class="material-symbols-outlined text-outline">chevron_right</span>
-        </button>
-        <button
-          class="w-full flex items-center justify-between p-3 rounded-xl text-error hover:bg-error/5 transition-colors">
-          <div class="flex items-center gap-3">
-            <a href="./login.html">
-              <span class="material-symbols-outlined">logout</span>
-              <span class="font-medium">Sign Out</span>
-            </a>
-          </div>
-        </button>
-      </div>
-    </section>
+
   </main>
-  <!-- BottomNavBar -->
+
+  <!-- Bottom Navigation -->
   <nav
-    class="fixed bottom-0 w-full rounded-t-3xl border-t border-transparent z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] flex justify-around items-center px-2 py-3 pb-safe">
-    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+    class="fixed bottom-0 w-full rounded-t-3xl border-t border-transparent z-50 bg-white/80 backdrop-blur-md shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] flex justify-around items-center px-2 py-3 pb-safe">
+    <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
       href="./Student_home.html">
       <span class="material-symbols-outlined">home</span>
       <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Home</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+    <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
       href="./Subject_List.html">
       <span class="material-symbols-outlined">menu_book</span>
       <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Subjects</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+    <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
       href="./Video_Lesson.html">
       <span class="material-symbols-outlined">play_circle</span>
       <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Lessons</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
+    <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-indigo-500 transition-all active:scale-90 duration-150"
       href="./Support_Chat.html">
       <span class="material-symbols-outlined">chat_bubble</span>
       <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Chat</span>
     </a>
-    <a class="flex flex-col items-center justify-center text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 rounded-2xl px-3 py-1 active:scale-90 transition-transform duration-150"
+    <a class="flex flex-col items-center justify-center text-indigo-600 bg-indigo-50 rounded-2xl px-3 py-1 active:scale-90 transition-transform duration-150"
       href="./Profile.html">
       <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
       <span class="font-inter text-[10px] font-medium uppercase tracking-wider">Profile</span>
     </a>
   </nav>
+
+  <!-- Firebase JS -->
+  <script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const docRef = doc(db, "users", user.uid);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          document.getElementById("userName").innerText = data.name;
+          document.getElementById("userEmail").innerText = data.email;
+          document.getElementById("userGrade").innerText = `Grade: ${data.grade} | Role: ${data.role}`;
+        }
+      } else {
+        window.location.href = "./Login.html";
+      }
+    });
+
+    // Logout
+    document.querySelectorAll("[href='./login.html']").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        signOut(auth).then(() => window.location.href = "./Login.html");
+      });
+    });
+  </script>
+
 </body>
 
 </html>
